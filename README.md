@@ -45,7 +45,8 @@ dubber переводит и озвучивает YouTube-видео и стри
 
 - Логи бекенда: `%LOCALAPPDATA%\dubber\logs` (последний файл) и `%LOCALAPPDATA%\dubber\cache\ollama.log`.
   Присылайте их вместе со ссылкой на видео и временем.
-- Попап → карточка «Локальный бекенд» показывает, что с ним: не установлен, остановлен, ошибка с логом.
+- Попап → вкладка «Настройки» показывает, что с бекендом: не установлен, остановлен, ошибка с логом. Пока
+  бекенд работает, в трее Windows есть его значок: оттуда можно открыть логи или остановить его.
 - Переустановка поверх — повторный запуск `dubber-setup.exe`. Удаление — «Программы и компоненты» → dubber
   backend (удаляет всю папку с моделями).
 
@@ -96,7 +97,8 @@ your computer that listens, translates and voices. Everything runs locally; noth
 
 - Backend logs: `%LOCALAPPDATA%\dubber\logs` (the newest file) and `%LOCALAPPDATA%\dubber\cache\ollama.log`. Send
   them with the video link and the time.
-- The popup's "Local backend" card shows its state: not installed, stopped, failed with the log.
+- The popup's Settings tab shows the backend's state: not installed, stopped, failed with the log. While the
+  backend runs, its icon sits in the Windows tray: open the logs or stop it from there.
 - Reinstall over the existing one: run `dubber-setup.exe` again. Uninstall: Apps & features → dubber backend
   (removes the whole folder, models included).
 

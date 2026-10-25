@@ -10,7 +10,8 @@ dubber переводит и озвучивает YouTube-видео и стри
 
 ### Что нужно
 
-- Windows 10/11, Chrome (или Edge).
+- Windows 10/11, Chrome (или Edge). Linux и macOS пока не поддерживаются: они в планах (ADR 0011), а до тех
+  пор на них работает только удалённый бекенд.
 - Видеокарта NVIDIA с памятью от 6 ГБ (8+ лучше; 12+ даёт лучший перевод).
 - ~15 ГБ на диске и хороший интернет для первой установки (модели ~10 ГБ).
 - Права администратора не нужны.
@@ -25,8 +26,12 @@ dubber переводит и озвучивает YouTube-видео и стри
    Chrome будет при каждом запуске предупреждать о расширении в режиме разработчика — это нормально, у нас
    пока нет публикации в магазине.
 4. Запустите `dubber-setup.exe`. SmartScreen скажет «Windows защитила ваш компьютер» — установщик не подписан;
-   нажмите **Подробнее → Выполнить в любом случае**. Установка идёт 5–15 минут: окружение, портативная Ollama,
-   модели (~10 ГБ). Всё ставится в `%LOCALAPPDATA%\dubber`, ничего в систему.
+   нажмите **Подробнее → Выполнить в любом случае**. Откроется окно установщика со списком компонентов и их
+   прогрессом: окружение Python, Ollama, Deno и модели качаются параллельно, около 20 ГБ, 15–30 минут. Окно
+   можно закрыть: расширение покажет, что установка идёт, а бэкенд запустится сам, когда она закончится. Всё
+   ставится в одну папку установки (на Windows `%LOCALAPPDATA%\dubber`), ничего в систему. Если новый
+   установщик у вас не заработал, в том же релизе лежит прежний `dubber-setup-classic.exe` (мастер Inno Setup,
+   консоль PowerShell, модели качаются при первом запуске) — напишите нам, что именно не сработало.
 5. Откройте видео на YouTube, нажмите на иконку dubber и включите **Озвучивать вкладку**. Бекенд запустится
    сам (первый раз ~1 минута: в попапе видно, что загружается). Видео встанет на паузу с надписью «Перевожу…»
    и пойдёт, когда будет готово. Через 10 минут без перевода бекенд сам выключится и освободит видеокарту.
@@ -43,10 +48,10 @@ dubber переводит и озвучивает YouTube-видео и стри
 
 ### Если что-то не так
 
-- Логи бекенда: `%LOCALAPPDATA%\dubber\logs` (последний файл) и `%LOCALAPPDATA%\dubber\cache\ollama.log`.
-  Присылайте их вместе со ссылкой на видео и временем.
+- Логи бекенда: `logs\` (последний файл) и `cache\ollama.log` в папке установки (на Windows
+  `%LOCALAPPDATA%\dubber`). Присылайте их вместе со ссылкой на видео и временем.
 - Попап → вкладка «Настройки» показывает, что с бекендом: не установлен, остановлен, ошибка с логом. Пока
-  бекенд работает, в трее Windows есть его значок: оттуда можно открыть логи или остановить его.
+  бекенд работает, в системном трее есть его значок: оттуда можно открыть логи или остановить его.
 - Переустановка поверх — повторный запуск `dubber-setup.exe`. Удаление — «Программы и компоненты» → dubber
   backend (удаляет всю папку с моделями).
 
@@ -63,7 +68,8 @@ your computer that listens, translates and voices. Everything runs locally; noth
 
 ### Requirements
 
-- Windows 10/11, Chrome (or Edge).
+- Windows 10/11, Chrome (or Edge). Linux and macOS are not supported yet: they are planned (ADR 0011); until
+  then only a remote backend works there.
 - An NVIDIA GPU with 6 GB of memory or more (8+ is better; 12+ gives the best translation).
 - ~15 GB of disk and a decent connection for the first install (~10 GB of models).
 - No admin rights needed.
@@ -77,8 +83,12 @@ your computer that listens, translates and voices. Everything runs locally; noth
    folder. Pin dubber in the toolbar. Chrome warns about developer-mode extensions at every start — expected, there
    is no store listing yet.
 4. Run `dubber-setup.exe`. SmartScreen will say "Windows protected your PC" (the installer isn't signed): **More
-   info → Run anyway**. The install takes 5–15 minutes: the Python environment, a portable Ollama, the models
-   (~10 GB). Everything goes into `%LOCALAPPDATA%\dubber`, nothing system-wide.
+   info → Run anyway**. The installer's window lists every component with its progress: the Python environment,
+   Ollama, Deno and the models download side by side, about 20 GB, 15–30 minutes. The window can be closed: the
+   extension shows that the install is running, and the backend starts by itself once it is done. Everything goes
+   into one install folder (`%LOCALAPPDATA%\dubber` on Windows), nothing system-wide. If the new installer does not
+   work for you, the same release carries the previous `dubber-setup-classic.exe` (an Inno Setup wizard, a
+   PowerShell console, models downloaded on the first start) — tell us what went wrong.
 5. Open a YouTube video, click the dubber icon and turn on **Dub this tab**. The backend starts by itself (the
    first time ~1 minute; the popup shows it loading). The video pauses with "Translating…" and plays once the dub
    is ready. After 10 minutes without a dub the backend exits and frees the GPU.
@@ -95,10 +105,10 @@ your computer that listens, translates and voices. Everything runs locally; noth
 
 ### When something is off
 
-- Backend logs: `%LOCALAPPDATA%\dubber\logs` (the newest file) and `%LOCALAPPDATA%\dubber\cache\ollama.log`. Send
-  them with the video link and the time.
+- Backend logs: `logs\` (the newest file) and `cache\ollama.log` in the install folder (`%LOCALAPPDATA%\dubber`
+  on Windows). Send them with the video link and the time.
 - The popup's Settings tab shows the backend's state: not installed, stopped, failed with the log. While the
-  backend runs, its icon sits in the Windows tray: open the logs or stop it from there.
+  backend runs, its icon sits in the system tray: open the logs or stop it from there.
 - Reinstall over the existing one: run `dubber-setup.exe` again. Uninstall: Apps & features → dubber backend
   (removes the whole folder, models included).
 

@@ -29,9 +29,8 @@ dubber переводит и озвучивает YouTube-видео и стри
    нажмите **Подробнее → Выполнить в любом случае**. Откроется окно установщика со списком компонентов и их
    прогрессом: окружение Python, Ollama, Deno и модели качаются параллельно, около 20 ГБ, 15–30 минут. Окно
    можно закрыть: расширение покажет, что установка идёт, а бэкенд запустится сам, когда она закончится. Всё
-   ставится в одну папку установки (на Windows `%LOCALAPPDATA%\dubber`), ничего в систему. Если новый
-   установщик у вас не заработал, в том же релизе лежит прежний `dubber-setup-classic.exe` (мастер Inno Setup,
-   консоль PowerShell, модели качаются при первом запуске) — напишите нам, что именно не сработало.
+   ставится в одну папку установки (на Windows `%LOCALAPPDATA%\dubber`), ничего в систему. Если установка
+   не прошла, нажмите **Повторить**; если и это не помогло, пришлите нам лог из папки `logs`.
 5. Откройте видео на YouTube, нажмите на иконку dubber и включите **Озвучивать вкладку**. Бекенд запустится
    сам (первый раз ~1 минута: в попапе видно, что загружается). Видео встанет на паузу с надписью «Перевожу…»
    и пойдёт, когда будет готово. Через 10 минут без перевода бекенд сам выключится и освободит видеокарту.
@@ -86,9 +85,8 @@ your computer that listens, translates and voices. Everything runs locally; noth
    info → Run anyway**. The installer's window lists every component with its progress: the Python environment,
    Ollama, Deno and the models download side by side, about 20 GB, 15–30 minutes. The window can be closed: the
    extension shows that the install is running, and the backend starts by itself once it is done. Everything goes
-   into one install folder (`%LOCALAPPDATA%\dubber` on Windows), nothing system-wide. If the new installer does not
-   work for you, the same release carries the previous `dubber-setup-classic.exe` (an Inno Setup wizard, a
-   PowerShell console, models downloaded on the first start) — tell us what went wrong.
+   into one install folder (`%LOCALAPPDATA%\dubber` on Windows), nothing system-wide. If the install fails, press
+   **Retry**; if that does not help, send us the log from the `logs` folder.
 5. Open a YouTube video, click the dubber icon and turn on **Dub this tab**. The backend starts by itself (the
    first time ~1 minute; the popup shows it loading). The video pauses with "Translating…" and plays once the dub
    is ready. After 10 minutes without a dub the backend exits and frees the GPU.

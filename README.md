@@ -16,7 +16,8 @@ dubber переводит и озвучивает YouTube-видео и стри
   диске и хороший интернет для первой установки (модели ~10 ГБ). Права администратора не нужны. Linux и macOS
   пока не поддерживаются (они в планах) — там работает только сервер.
 - **Сервер:** любой компьютер и аккаунт на mydubber.com (вход по коду из письма или через Google). Бесплатно —
-  60 минут в месяц на записях; Pro — без ограничения минут и с прямыми эфирами. Сервер пока в тестировании.
+  15 минут в месяц, записи и прямые эфиры; Pro — 20 часов в месяц, пробный период 7 дней (до 2 часов). Сервер
+  пока в тестировании.
 
 ### Установка расширения
 
@@ -43,7 +44,7 @@ Chrome при каждом запуске будет предупреждать 
    — расширение скачает его само).
 2. Запустите его. SmartScreen скажет «Windows защитила ваш компьютер» — установщик не подписан; нажмите
    **Подробнее → Выполнить в любом случае**. Откроется окно установщика со списком компонентов и их прогрессом:
-   окружение Python, Ollama, Deno и модели качаются параллельно, около 20 ГБ, 15–30 минут. Окно можно закрыть:
+   окружение Python, Ollama, Deno и модели качаются параллельно, около 19 ГБ, 15–30 минут. Окно можно закрыть:
    расширение покажет, что установка идёт, а бэкенд запустится сам, когда она закончится. Всё ставится в одну
    папку установки (на Windows `%LOCALAPPDATA%\myDubber`), ничего в систему. Если установка не прошла, нажмите
    **Повторить**; если и это не помогло, пришлите нам лог из папки `logs`.
@@ -101,10 +102,11 @@ GPU; nothing is sent anywhere) or **on our server** (any computer, needs an acco
 
 - Chrome or Edge.
 - **Local:** Windows 10/11, an NVIDIA GPU with 6 GB of memory or more (8+ is better; 12+ gives the best
-  translation), ~15 GB of disk and a decent connection for the first install (~10 GB of models). No admin rights
+  translation), ~19 GB of disk and a decent connection for the first install (~10 GB of models). No admin rights
   needed. Linux and macOS are not supported yet (they are planned) — only the server works there.
-- **Server:** any computer and an account on mydubber.com (a code by email, or Google). Free: 60 minutes a month of
-  recordings; Pro: unlimited minutes and live streams. The server is still in testing.
+- **Server:** any computer and an account on mydubber.com (a code by email, or Google). Free: 15 minutes a month,
+  recordings and live streams; Pro: 20 hours a month, with a 7-day trial of up to 2 hours. The server is still in
+  testing.
 
 ### Install the extension
 
@@ -131,7 +133,7 @@ with its ×; don't click "Disable", or Chrome turns the extension off.
    extension downloads it itself).
 2. Run it. SmartScreen will say "Windows protected your PC" (the installer isn't signed): **More info → Run
    anyway**. The installer's window lists every component with its progress: the Python environment, Ollama, Deno
-   and the models download side by side, about 20 GB, 15–30 minutes. The window can be closed: the extension shows
+   and the models download side by side, about 19 GB, 15–30 minutes. The window can be closed: the extension shows
    that the install is running, and the backend starts by itself once it is done. Everything goes into one install
    folder (`%LOCALAPPDATA%\myDubber` on Windows), nothing system-wide. If the install fails, press **Retry**; if that
    does not help, send us the log from the `logs` folder.

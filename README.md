@@ -92,6 +92,11 @@ Chrome при каждом запуске будет предупреждать 
 Расширение обновляется вручную: скачайте новый `dubber-extension.zip` из последнего релиза, распакуйте поверх той
 же папки (с заменой файлов) и нажмите «Обновить» (круглая стрелка) у dubber на `chrome://extensions`.
 
+Один раз, при переходе на id из Chrome Web Store (релизы с ноября 2026): сначала запустите `my-dubber-setup.exe` из
+нового релиза (или дождитесь, пока бекенд обновится сам), затем на `chrome://extensions` удалите dubber, распакуйте
+новый zip и загрузите его заново через «Загрузить распакованное». Это новое расширение для Chrome: настройки
+сбросятся, в Сервер нужно войти заново.
+
 ## English
 
 dubber dubs YouTube videos and live streams while you watch. It is a Chrome extension plus a **backend** — the
@@ -179,6 +184,11 @@ isn't running yet; the video waits meanwhile with an "Updating the backend" badg
 previous version. The "Update automatically" switch in Settings turns it off; the popup then offers the update with a
 button. The extension is updated by hand: download the new `dubber-extension.zip` from the latest release, unzip it over the
 same folder (replacing the files) and press "Reload" (the round arrow) on dubber's card in `chrome://extensions`.
+
+Once, when the extension moves to the Chrome Web Store's id (releases from November 2026): first run
+`my-dubber-setup.exe` from the new release (or let the backend update itself), then remove dubber on
+`chrome://extensions`, unzip the new zip and load it again with **Load unpacked**. To Chrome it is a new extension:
+the settings start over, and Server needs a sign-in again.
 
 ---
 

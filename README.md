@@ -146,8 +146,7 @@ with its ×; don't click "Disable", or Chrome turns the extension off.
    time ~1 minute; the popup shows it loading). The video pauses with "Translating…" and plays once the dub is
    ready. After 10 minutes without a dub the backend exits and frees the GPU.
 
-Without an account the local backend runs the Light profile; signing in (the Free plan is enough) unlocks Medium
-and Full.
+Without an account the local backend runs the Light profile; signing in (the Free plan is enough) unlocks Max.
 
 ### Server
 
@@ -160,11 +159,10 @@ and Full.
 
 ### What to expect
 
-- The hardware profile (Full / Medium / Light) is picked from the free GPU memory; the popup lets you change it.
+- The hardware profile (Max / Light) is picked from the free GPU memory; the popup lets you change it.
   When the backend can't keep up with the video, the popup says so and suggests what to do.
-- Source languages: any of the twelve (Ukrainian, Portuguese, Turkish and Polish included) or auto-detect. Dub
-  into: Russian, English, Korean, Japanese, Chinese, Spanish, German, French (no Ukrainian, Portuguese, Turkish
-  or Polish voice yet).
+- Source languages: any the popup's picker offers, or auto-detect. Dub into: any target the picker offers (the
+  voice's own list, read from the backend).
 - Each speaker is voiced by a voice like their own; there is no voice picker.
 - Live streams play ~14 s behind the live edge.
 

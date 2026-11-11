@@ -171,7 +171,8 @@ Without an account the local backend runs the Light profile; signing in (the Fre
 - Backend logs: `logs\` (the newest file) and `cache\ollama.log` in the install folder (`%LOCALAPPDATA%\myDubber`
   on Windows). Send them with the video link and the time.
 - The popup's Settings tab shows the backend's state: not installed, stopped, failed with the log. While the
-  backend runs, its icon sits in the system tray: open the logs or stop it from there.
+  backend runs, its icon sits in the system tray: open the logs or stop it from there (the dub turns off in the tabs, as with
+  the popup's Stop).
 - Reinstall over the existing one: run `my-dubber-setup.exe` again. Uninstall: Apps & features → myDubber backend
   (removes the whole folder, models included).
 

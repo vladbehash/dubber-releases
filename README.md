@@ -164,7 +164,7 @@ Without an account the local backend runs the Light profile; signing in (the Fre
 - Source languages: any the popup's picker offers, or auto-detect. Dub into: any target the picker offers (the
   voice's own list, read from the backend).
 - Each speaker is voiced by a voice like their own; there is no voice picker.
-- Live streams play ~14 s behind the live edge.
+- Live streams play ~14 s behind the live edge. A stream that can't be rewound isn't dubbed: the player says so.
 
 ### When something is off
 
